@@ -14,7 +14,8 @@ Nous allons ensuite ajouter toutes les animations dont nous aurons besoin pour c
 
 Pour le faire facilement, créez une nouvelle animation pour chaque action du personnage.
 
-Voici ce que cela donne pour les animations de course. Il est important de les nommer comme ceci afin que ce soit plus simple à utiliser plus tard. Il faut aussi bien cocher "en boucle".
+Voici ce que cela donne pour les animations de course. Il est important de les nommer comme ceci afin que ce soit plus
+simple à utiliser plus tard. Il faut aussi bien cocher "en boucle".
 ![img_2.png](image_3/img_2.png)
 
 Nous allons faire la même chose pour les animations de saut, d'attente (idle) et de dégât (hit).
@@ -62,7 +63,8 @@ Ce point pourra être déplacé plus tard si l'épée n'est pas au bon endroit.
 
 Maintenant, nous allons ajouter le joueur dans le monde.
 
-En premier lieu, nous allons mettre le joueur en tant qu'objet global en faisant un clic droit dessus, puis en cliquant sur "Définir comme objet global".
+En premier lieu, nous allons mettre le joueur en tant qu'objet global en faisant un clic droit dessus, puis en cliquant
+sur "Définir comme objet global".
 
 Pour cela, il suffit de glisser-déposer le joueur dans le monde, au-dessus de notre tilemap.
 
@@ -80,7 +82,8 @@ Puis nous allons créer un nouvel évènement.
 
 ![img_23.png](image_3/img_23.png)
 
-Nous allons laisser les conditions vides afin que l'action soit toujours activée. Nous allons ensuite ajouter l'action "zoom de la caméra" en cliquant sur le bouton "Ajouter une action".
+Nous allons laisser les conditions vides afin que l'action soit toujours activée. Nous allons ensuite ajouter l'action "
+zoom de la caméra" en cliquant sur le bouton "Ajouter une action".
 
 ![img_24.png](image_3/img_24.png)
 ![img_25.png](image_3/img_25.png)
@@ -101,7 +104,8 @@ Ensuite, créez trois nouveaux évènements que nous glisserons dans le dossier 
 
 ![img_28.png](image_3/img_28.png)
 
-Dans le premier évènement, nous allons mettre comme condition que si la vitesse de déplacement est "égale à" 0, alors nous appliquons au joueur l'animation idle.
+Dans le premier évènement, nous allons mettre comme condition que si la vitesse de déplacement est "égale à" 0, alors
+nous appliquons au joueur l'animation idle.
 
 ![img_29.png](image_3/img_29.png)
 
@@ -111,7 +115,8 @@ Pour l'action, cliquez sur "utiliser une expression".
 
 ![img_31.png](image_3/img_31.png)
 
-Dans les deux autres évènements, ce sera presque identique, mais nous vérifierons si la vitesse est supérieure à 0 ou inférieure à 0.
+Dans les deux autres évènements, ce sera presque identique, mais nous vérifierons si la vitesse est supérieure à 0 ou
+inférieure à 0.
 
 ![img_32.png](image_3/img_32.png)
 
@@ -122,6 +127,11 @@ Enfin, nous allons ajouter une deuxième action : le retournement du joueur.
 ![img_33.png](image_3/img_33.png)
 
 ## Détection de la mort
+
+Quand le joueur n'a plus de vie, on vas devoir lui faire recommencé le jeux.
+pour cela on vas créée un nouveau évènement dans le groupe joueur
+
+![img_46.png](image_3/img_45.png)
 
 Nous allons retourner dans l'onglet de scène et créer un nouveau sprite que nous appellerons "MortCollision".
 
