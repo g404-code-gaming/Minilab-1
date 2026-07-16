@@ -11,12 +11,12 @@ Il y a dedans un coffre, un drapeau, des piques ainsi que des arbres d'arrière-
 
 Chaque objet est un sprite.
 
-![img.png](img.png)
+![img.png](image_6/img.png)
 
 Avec ces objets, nous pouvons améliorer le rendu graphique de notre niveau 1.
 
 Pour les piques, voici le code à ajouter.
 
-![img_1.png](img_1.png)
+![img_1.png](image_6/img_1.png)
 
 N'oubliez pas qu'il faut que les arbres aient un Z index négatif, afin qu'ils soient en arrière-plan et que le joueur soit toujours avec le Z index le plus élevé.

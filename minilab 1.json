@@ -12484,6 +12484,38 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Joueur",
+                    "Pique",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Joueur",
+                    "Health",
+                    "1",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
