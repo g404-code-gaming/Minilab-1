@@ -1,126 +1,112 @@
-# Capacité spécial
+# Capacité spéciale
 
-## un nouveau Collectible
+## Un nouveau collectible
 
-Nous allons rajouté un nouveau objet "sprite" qui utilisera la potion bleu, il peux être créée dans la scene qu'on veux,
-étant donné qu'on la transformera en objet global
+Nous allons ajouter un nouvel objet `Sprite` qui utilisera la potion bleue. Il peut être créé dans la scène de votre choix, car il sera ensuite transformé en objet global.
 
 ![img.png](image_2/img.png)
 
-nous allons la mettre en objet global et en disposé un peux partout dans nos différent monde
+Nous allons le mettre en objet global et en placer plusieurs dans nos différents mondes.
 
 ![img_1.png](image_2/img_1.png)
 
-dans les événement, nous allons rajouté que, si on récupére cette potion, nous allons augmenté la variable global "
-power". nous allons quand même mettre un cap max, afin d'évité d'avoir trop de "power".
+Dans les événements, nous allons ajouter une règle : si le joueur récupère cette potion, la variable globale `power` augmente. Nous allons quand même définir une limite maximale afin d'éviter d'avoir trop de `power`.
 
-Donc on ajoute un événement dans le groupe "collectible"
+On ajoute donc un événement dans le groupe `Collectible`.
 
 ![img_2.png](image_2/img_2.png)
 
 ![img_3.png](image_2/img_3.png)
 
-le fait d'utilisé "min()" permet de faire en sorte que ça sois la plus petite valeur entre la nouvelle valeur de power (
-power + 1) et la valeur max. si on dépasse la valeur max (qui est 4) on vas bloqué a 4
+L'utilisation de `min()` permet de garder la plus petite valeur entre la nouvelle valeur de `power` (`power + 1`) et la valeur maximale. Si on dépasse la valeur maximale, qui est 4, la variable reste bloquée à 4.
 
-on pense aussi a supprimé l'objet, afin de ne pas a le ramassé en boucle
+On pense aussi à supprimer l'objet afin de ne pas pouvoir le ramasser en boucle.
 
 ![img_4.png](image_2/img_4.png)
 
-Bien pensé a la copier collé dans les autre niveau
+Pensez à copier-coller cet événement dans les autres niveaux.
 
-## Lancé d'épée
+## Lancer d'épée
 
-Nous allons créée un nouvelle objet "sprite" qu'on mettra en objet global et dedans nous allons mettre simplement l'
-image présent dans le dossier "sword/23-sword embedded"
+Nous allons créer un nouvel objet `Sprite`, que nous mettrons en objet global. Dans cet objet, nous utiliserons simplement l'image présente dans le dossier `sword/23-sword embedded`.
 
 ![img_5.png](image_2/img_5.png)
 
-et nous allons modifier les point pour déplacé le point d'origine au niveau du manche de l'épée
+Nous allons ensuite modifier les points de l'objet pour déplacer le point d'origine au niveau du manche de l'épée.
 
 ![img_14.png](image_2/img_14.png)
 
-maintenent nous allons géré le lancé d'épée, pour cela nous allons créée un nouvelle événement dans le groupe joueur, et
-nous allons vérifier si une touche est préssé, et si on a assez de power
+Maintenant, nous allons gérer le lancer d'épée. Pour cela, nous allons créer un nouvel événement dans le groupe du joueur, puis vérifier si une touche est pressée et si le joueur a assez de `power`.
 
 ![img_6.png](image_2/img_6.png)
 
-En action nous allons retiré 2 a power, et nous allons faire apparaitre l'épée qui ce lance au point du joueur "sword"
+En action, nous allons retirer 2 à `power`, puis faire apparaître l'épée lancée au point `sword` du joueur.
 
 ![img_7.png](image_2/img_7.png)
 
-et nous allons rajouté deux événement en dessous de l'événement qu'on vient d'ajouté de cette façon
+Nous allons ajouter deux événements en dessous de celui que nous venons de créer.
 
 ![img_8.png](image_2/img_8.png)
 
-cela nous permet de mettre une sous condition, dans laquel on vas vérifier l'oriantation du joueur
+Cela permet de créer une sous-condition dans laquelle on vérifie l'orientation du joueur.
 
 ![img_9.png](image_2/img_9.png)
 
-sur le deuxième événement, nous allons faire clique droit puis remplacé et enfin "faite en une else pour événement
-précédent"
+Sur le deuxième événement, faites un clic droit, puis choisissez `Remplacer`, puis `Faites-en un else pour l'événement précédent`.
 
 ![img_10.png](image_2/img_10.png)
 
-cela vas nous donné ceci
+Cela donne ceci.
 
 ![img_11.png](image_2/img_11.png)
 
-et vas nous permettre de mettre des action sur l'inverse du précédent événement
+Nous pouvons maintenant ajouter des actions pour le cas inverse de l'événement précédent.
 
-sur le premièr événement, nous allons retournée l'épée lancé, puis nous allons lui appliqué une force permanante dans la
-direction x negative
+Sur le premier événement, nous retournons l'épée lancée, puis nous lui appliquons une force permanente dans la direction X négative.
 
 ![img_12.png](image_2/img_12.png)
 
-pour l'autre événement, on a juste a appliqué une force mais dans l'autre sence
+Pour l'autre événement, il suffit d'appliquer une force dans l'autre sens.
 
 ![img_13.png](image_2/img_13.png)
 
-On pence bien a mettre l'objet de l'épée dans les objets globaux et a copier collé le code dans les autre niveau
+Pensez bien à mettre l'objet de l'épée dans les objets globaux et à copier-coller le code dans les autres niveaux.
 
-nous pouvons maintenent test que tout fonctionne avant de passé a l'étape suivante
+Nous pouvons maintenant tester que tout fonctionne avant de passer à l'étape suivante.
 
-## détéction des ennemies et disparition
+## Détection des ennemis et disparition
 
-On vas commencé par les ennemie, on vas rajouté un événement dans le groupe joueur dans lequel on vas mettre en
-condition que l'épée lancé touche un ennemie (du groupe ennemie) cela le supprime, supprime l'épée lancé et rajoute du
-score
+Nous allons commencer par les ennemis. On ajoute un événement dans le groupe du joueur avec comme condition : l'épée lancée touche un ennemi du groupe `Ennemis`. Si c'est le cas, on supprime l'ennemi, on supprime l'épée lancée et on ajoute du score.
 
 ![img_15.png](image_2/img_15.png)
 
 ![img_16.png](image_2/img_16.png)
 
-on le copie colle dans les autre niveau
+On copie-colle ensuite cet événement dans les autres niveaux.
 
-On vas mettre en place que si l'épée lancé sort de la caméra (de ce qu'on vois) alors l'épée disparais
+Nous allons aussi faire disparaître l'épée lancée lorsqu'elle sort de la caméra.
 
-pour cela on vas allez dans l'épée lancé puis comportement puis on ajoute les comportement "Détruire en dehors de
-l'écran"
+Pour cela, allez dans l'objet de l'épée lancée, puis dans `Comportements`, et ajoutez le comportement `Détruire en dehors de l'écran`.
 
 ![img_18.png](image_2/img_18.png)
 ![img_17.png](image_2/img_17.png)
 
-cela vas nous permettre de faire disparaitre l'épée quand elle sort de l'écrant
+Cela permet de faire disparaître l'épée quand elle sort de l'écran.
 
-## Affichage du Power
+## Affichage du power
 
-Maintenent qu'on a paramettré notre power, il nous faut l'affiché sur l'hud, pour cela nous allons créée un nouvelle
-objet "barre de ressource" et dedans nous allons selectionné la barre que nous souhaitons
+Maintenant que le `power` est paramétré, il faut l'afficher dans le HUD. Pour cela, nous allons créer un nouvel objet `Barre de ressource` et sélectionner la barre que nous souhaitons utiliser.
 
 ![img_19.png](image_2/img_19.png)
 
-puis une fois cela fait, nous faisons double clique sur la barre pour affiché c'est paramettre et nous allons mettre la
-valeur initial a 0 et la valeur max a 4
+Une fois cela fait, double-cliquez sur la barre pour afficher ses paramètres, puis mettez la valeur initiale à 0 et la valeur maximale à 4.
 
 ![img_20.png](image_2/img_20.png)
 
-ensuite on ajoute la barre dans l'hud, en veillant a bien selectionné le calque "HUD" (ou en metant l'objet puis dans
-les propiété en selectionnant le calque "hud")
-vous pouvez la placé la ou vous voulez, et vous mettez la barre dans les objets globaux afin de pouvoir la rajouté dans
-tout les niveaux
+Ensuite, ajoutez la barre dans le HUD en veillant à bien sélectionner le calque `HUD`. Vous pouvez aussi placer l'objet dans la scène, puis choisir le calque `HUD` dans ses propriétés.
 
-une fois cela fait, nous pouvons allez dans la partie code et dans le même événement où l'on a mis en place la vie dans
-la barre de vie, nous allons mettre la valeur de la barre de power a la valeur de la variable power
+Vous pouvez placer la barre où vous voulez. Mettez-la ensuite dans les objets globaux afin de pouvoir la réutiliser dans tous les niveaux.
+
+Une fois cela fait, allez dans la partie code. Dans le même événement que celui utilisé pour mettre à jour la barre de vie, ajoutez une action qui met la valeur de la barre de `power` à la valeur de la variable `power`.
 
 ![img_21.png](image_2/img_21.png)

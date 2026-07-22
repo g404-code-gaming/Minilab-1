@@ -1,17 +1,16 @@
-# reprise
+# Reprise
 
-## Vérification du jeux
+## Vérification du jeu
 
-La première étape de la journée est de vérifier que tout fonctionne correctement.
+La première étape de la journée consiste à vérifier que tout fonctionne correctement.
 
-cette étape est importante car, après deux jour de développement, on peux se rendre compte que quelque fonctionnalité ne
-fonctionne plus, ou qu'on souhaiterais modifier quelque éléments.
+Cette étape est importante : après deux jours de développement, on peut se rendre compte que certaines fonctionnalités ne fonctionnent plus, ou que quelques éléments doivent être modifiés.
 
-## Chronomettre
+## Chronomètre
 
-On vas créée un chronomettre afin de pouvoir faire du "speedrun" du jeux.
+Nous allons créer un chronomètre afin de pouvoir faire du "speedrun" dans le jeu.
 
-pour cela on vas créée une nouvelle variable globale,
+Pour cela, nous allons créer une nouvelle variable globale.
 
 ![img.png](image_1/img.png)
 
@@ -21,22 +20,21 @@ pour cela on vas créée une nouvelle variable globale,
 
 ![img_1.png](image_1/img_1.png)
 
-puis on applique.
+Puis on applique.
 
-ce qu'on vas faire ces rajouté un nouvelle événement avec une condition vide, et en action on vas ajouté a la variable "
-globaleTime" le temps qui c'est écoulé depuis la dernier mise a jour du jeux
-Nous allons aussi rajouté juste avant l'action qu'on met a 0 la variable "globalTime" mais uniquemnet au niveau 1, afin
-de remettre a jour le timer correctement.
+Nous allons ajouter un nouvel événement avec une condition vide. En action, nous ajoutons à la variable globale `globalTime` le temps écoulé depuis la dernière mise à jour du jeu.
+
+Nous allons aussi ajouter, juste avant cette action, une remise à 0 de la variable `globalTime`, mais uniquement dans le niveau 1, afin de redémarrer correctement le chronomètre au début de la partie.
+
 ![img_2.png](image_1/img_2.png)
 
-on met également cette événement dans le niveau 2, mais sans la partie ou l'on remet a 0 le timer
+On met également cet événement dans le niveau 2, mais sans la partie qui remet le chronomètre à 0.
 
 ![img_8.png](image_1/img_8.png)
 
 ![img_4.png](image_1/img_4.png)
 
-Nous allons créée un nouvelle Objet "texte" afin d'affiché dedans le timer, cette objet peux être réalisé dans n'importe
-quel scène étant donné qu'il sera ensuite mis en objet globale
+Nous allons créer un nouvel objet `Texte` afin d'afficher le chronomètre. Cet objet peut être créé dans n'importe quelle scène, car il sera ensuite transformé en objet global.
 
 ![img_5.png](image_1/img_5.png)
 
@@ -44,30 +42,24 @@ quel scène étant donné qu'il sera ensuite mis en objet globale
 
 ![img_7.png](image_1/img_7.png)
 
-pour l'instant nous somme dans le niveau 1, mais quelque sois le niveau toute ces étape serons a réalisé (mais les
-événement pourrons être copier collé pour gagné du temps)
+Pour l'instant, nous sommes dans le niveau 1, mais ces étapes devront être répétées dans tous les niveaux. Les événements pourront être copiés-collés pour gagner du temps.
 
-dans notre événement qu'on a créée pour le timer, nous allons rajouté une action qui est de renommé le texte par la valeur du "globalTime"
+Dans l'événement créé pour le chronomètre, nous allons ajouter une action qui modifie le texte pour afficher la valeur de `globalTime`.
 
-pour cela nous allons arrondire a 3 chiffre après la virgule afin de ne pas affiché une chiffre avec une 20en de décimal
+Pour cela, nous allons arrondir la valeur à 3 chiffres après la virgule, afin de ne pas afficher un nombre avec trop de décimales.
 
 ![img_9.png](image_1/img_9.png)
 
-une fois cela fait, nous allons mettre notre objet "Timer" en objet global afin de pouvoir faire les même action dans notre niveau 2
+Une fois cela fait, nous allons transformer notre objet `Timer` en objet global afin de pouvoir utiliser les mêmes actions dans le niveau 2.
 
-maintenent nous pouvons vérifier que tout fonctionne correctement en allans d'un niveau a l'autre
+Nous pouvons maintenant vérifier que tout fonctionne correctement en passant d'un niveau à l'autre.
 
-
-Maintenent nous allons Rajouté un affichage propre du timer dans la scene de victoire
+Nous allons ensuite ajouter un affichage propre du chronomètre dans la scène de victoire.
 
 ![img_10.png](image_1/img_10.png)
 
 ![img_11.png](image_1/img_11.png)
 
-puis dans les événement on vas rajouté qu'on met le texte a "Votre Chôno : " + globalTime
+Dans les événements, nous ajoutons une action qui met le texte à `"Votre chrono : " + globalTime`.
+
 ![img_12.png](image_1/img_12.png)
-
-
-
-
-

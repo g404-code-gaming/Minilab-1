@@ -1,21 +1,22 @@
 # Boss
 
-## ajout de l'objet
+## Ajout de l'objet
 
-Nous allons créée un boss qui sera un requin géant, pour cela nous allons créer un nouveau objet "Sprite" qu'on
-appelera "Boss"
+Nous allons créer un boss qui sera un requin géant. Pour cela, nous allons créer un nouvel objet `Sprite` que nous appellerons `Boss`.
 
-Toute les annimation ce trouve dans le dossier "requin"
+Toutes les animations se trouvent dans le dossier `requin`.
 
 ![img.png](image_4/img.png)
 
-nous allons lui augmenté ça taille, en cliquant sur "Option avancé"
+Nous allons augmenter sa taille en cliquant sur `Options avancées`.
 
 ![img_5.png](image_4/img_5.png)
-puis mettre 2 en facteur de taille
+
+Puis nous mettons `2` comme facteur de taille.
+
 ![img_6.png](image_4/img_6.png)
 
-puis en comportement nous allons lui rajouté de la vie, ainsi qu'un comportement d'objet de plateforme
+Dans les comportements, nous allons lui ajouter de la vie, ainsi qu'un comportement d'objet de plateforme.
 
 ![img_1.png](image_4/img_1.png)
 ![img_2.png](image_4/img_2.png)
@@ -24,34 +25,32 @@ puis en comportement nous allons lui rajouté de la vie, ainsi qu'un comportemen
 
 ![img_4.png](image_4/img_4.png)
 
-nous allons ensuite lui rajouté une variable
+Nous allons ensuite lui ajouter une variable.
 
 ![img_9.png](image_4/img_9.png)
 
-qu'on appellera "Active" et qui sera en boolean (vrai ou faux) et en faux de base
+Cette variable s'appellera `Active`. Elle sera de type booléen, c'est-à-dire vrai ou faux, et elle sera à `false` par défaut.
 
 ![img_10.png](image_4/img_10.png)
 
-## événement
+## Événements
 
-Cette fois ci, nous allons utilisé toute les animations
+Cette fois-ci, nous allons utiliser toutes les animations.
 
-en premier nous allons créée un groupe d'événement qu'on vas appeler "Boss"
+Nous allons d'abord créer un groupe d'événements que nous appellerons `Boss`.
 
 ![img_7.png](image_4/img_7.png)
 ![img_8.png](image_4/img_8.png)
 
-et dedans nous allons y mettre des événements
+Nous allons ensuite y placer les événements du boss.
 
-Le premier événement est que, si le joueur rentre dans la zone de detection du boss, et ce une seul fois, alors on vas
-changé la variable "Active" du boss a "vrai"
+Le premier événement vérifie si le joueur entre dans la zone de détection du boss, une seule fois. Si c'est le cas, on met la variable `Active` du boss à `true`.
 
 ![img_11.png](image_4/img_11.png)
 ![img_12.png](image_4/img_12.png)
 ![img_13.png](image_4/img_13.png)
 
-le second événement est que, si le boss est en active, et en vie, alors il vas se raproché du joueur mais uniquement sur
-l'axe "x"
+Le deuxième événement vérifie si le boss est actif et encore en vie. Si c'est le cas, il se rapproche du joueur, mais uniquement sur l'axe X.
 
 ![img_14.png](image_4/img_14.png)
 ![img_27.png](image_4/img_27.png)
@@ -60,19 +59,18 @@ l'axe "x"
 
 ![img_16.png](image_4/img_16.png)
 
-nous allons rajouté ensuite 2 autre événement qui permettron de retourné le boss afin qu'il regarde toujours dans la bonne direction
+Nous allons ensuite ajouter deux autres événements qui permettent de retourner le boss afin qu'il regarde toujours dans la bonne direction.
 
-pour cela nous allons prendre la condition "comparer deux nombre" et comparé la différence entre la position du joueur et la position du boss, si il est positif (supérieur a 0) alors le joueur se trouve sur la droite du boss, si il est négatif (inférieur a 0) alors le joueur se trouve sur la gauche du boss
-on fait ça pour les deux événement
+Pour cela, nous utilisons la condition `Comparer deux nombres` et nous comparons la différence entre la position du joueur et la position du boss. Si le résultat est positif, le joueur se trouve à droite du boss. S'il est négatif, le joueur se trouve à gauche du boss.
+
+On crée cette logique dans les deux événements.
 
 ![img_31.png](image_4/img_31.png)
 ![img_32.png](image_4/img_32.png)
 
+Ensuite, nous allons mettre en place les dégâts infligés au boss. Il y aura plusieurs événements liés à cela.
 
-Ensuite nous allons mettre en place les dégat du joueur
-il y aura plusieurs événement lier à cela
-
-les deux premier son pour la detection des épée sur le boss, on vérifie si l'épée rentre en collision avec le boss et si c'est le cas on retire de la vie au boss et on suprimme l'épée lancé
+Les deux premiers servent à détecter les épées qui touchent le boss. On vérifie si l'épée entre en collision avec le boss. Si c'est le cas, on retire de la vie au boss et on supprime l'épée lancée.
 
 ![img_17.png](image_4/img_17.png)
 ![img_18.png](image_4/img_18.png)
@@ -81,44 +79,38 @@ les deux premier son pour la detection des épée sur le boss, on vérifie si l'
 
 ![img_20.png](image_4/img_20.png)
 
-Nous allons rajouté 4 autre événement qui son pour les animations
+Nous allons ajouter quatre autres événements pour gérer les animations.
 
-Le premier est pour activé l'animation de dégat a condition que le joueur ne sois pas mort et qu'il ai pris des dégat
-il faut bien activé la "condition inverse"
+Le premier sert à activer l'animation de dégâts, à condition que le boss ne soit pas mort et qu'il ait pris des dégâts. Il faut bien activer la condition inverse.
 
 ![img_21.png](image_4/img_21.png)
 
 ![img_22.png](image_4/img_22.png)
 
-ensuite c'est la même chose mais si le joueur est mort, on vas jouer une autre animation
+Ensuite, nous faisons la même chose pour le cas où le boss est mort : on joue une autre animation.
 
 ![img_23.png](image_4/img_23.png)
 
-ensuite nous allons vérifier que l'animation est fini et que c'est l'animation "hit" et si c'est le cas, nous allons
-relancé l'animation d'idle
+Nous allons ensuite vérifier que l'animation est terminée et qu'il s'agit de l'animation `hit`. Si c'est le cas, nous relançons l'animation `idle`.
 
 ![img_24.png](image_4/img_24.png)
 
-et nous faisons pareil pour le dernière événement, mais avec l'animation "death"
+Nous faisons la même chose pour le dernier événement, mais avec l'animation `death`.
 
 ![img_25.png](image_4/img_25.png)
 
-voici au globale se que nous avons
+Voici l'ensemble des événements obtenus.
 
 ![img_26.png](image_4/img_26.png)
 
-Maintenent il ne nous reste plus qu'a faire en sorte que quand le boss attaque le joueur, que cela retire 1 point de vie
-au joueur et que ça joue l'animation d'attaque
+Maintenant, il ne reste plus qu'à faire en sorte que l'attaque du boss retire 1 point de vie au joueur et joue l'animation d'attaque.
 
 ![img_28.png](image_4/img_28.png)
 
-## fin du niveau
+## Fin du niveau
 
-maintenent que le boss est mort, nous allons faire apparaitre le diamant sur lui, pour cela nous allons rajouté un
-événement, dans lequel nous allons vérifier que l'animation de mort est terminé, et si c'est le cas faire apparaitre un
-diamant
+Maintenant que le boss peut mourir, nous allons faire apparaître le diamant sur lui. Pour cela, nous ajoutons un événement dans lequel nous vérifions que l'animation de mort est terminée. Si c'est le cas, nous faisons apparaître un diamant.
 
 ![img_29.png](image_4/img_29.png)
 
 ![img_30.png](image_4/img_30.png)
-

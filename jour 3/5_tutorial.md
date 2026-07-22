@@ -1,33 +1,29 @@
 # Tutoriel
 
-Maintenent que nous avons fini nos mondes et notre boss, nous allons rajouté des indication dans le niveau 1 et 2 afin
-que le joueur sache comment se déplacé et comment utilisé c'est capacité
+Maintenant que les mondes et le boss sont terminés, nous allons ajouter des indications dans les niveaux 1 et 2 afin que le joueur sache comment se déplacer et comment utiliser ses capacités.
 
 ## Le monde 1
 
-On vas commencé par le monde 1, nous allons rajouté des objet texte afin d'affiché les touche de déplacement
+On commence par le monde 1. Nous allons ajouter des objets `Texte` pour afficher les touches de déplacement.
 
-pour cela on vas créée 4 objet "Texte" et y écrire les touche qu'on utilise afin d'obtenir ceci
+Pour cela, créez quatre objets `Texte` et écrivez les touches utilisées afin d'obtenir ceci.
 
 ![img.png](image_5/img.png)
 
 ![img_1.png](image_5/img_1.png)
 
-Bien sur il faut changé le nom et le texte selons les touche que vous avez attribuer
+Bien sûr, il faut changer le nom et le texte selon les touches que vous avez attribuées.
 
-on vas rajouté la touche de saut
+On ajoute aussi la touche de saut.
 
 ![img_2.png](image_5/img_2.png)
 
-il vas faloire faire pareil pour quand on est devant le premier énnemie
+Il faut faire la même chose devant le premier ennemi.
 
 ![img_3.png](image_5/img_3.png)
 
-## le monde 2
+## Le monde 2
 
-dans le niveau 2, nous allons faire pareil pour parlé de la touche Power, le mieux pour cela est de mettre deux "potion
-de mana" avec la touche juste après afin de montré qu'il y a une action a effectuer
+Dans le niveau 2, nous allons faire la même chose pour expliquer la touche du pouvoir. Le mieux est de placer deux potions de mana, puis d'ajouter la touche juste après, afin de montrer qu'une action est possible.
 
 ![img_4.png](image_5/img_4.png)
-
-

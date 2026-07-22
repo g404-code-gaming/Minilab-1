@@ -1,57 +1,56 @@
-# Niveau Final
+# Niveau final
 
-## un grand niveau
+## Un grand niveau
 
-Afin de finir en beauté, nous allons faire un niveau final, méllant bateau et iles.
+Pour finir en beauté, nous allons créer un niveau final mêlant bateau et îles.
 
-pour cela nous allons utilisé les tilemap déjà créer ainsi que tout les élément de décord et énemmie.
+Pour cela, nous allons utiliser les tilemaps déjà créées, ainsi que tous les éléments de décor et les ennemis.
 
-Dans un premier temps nous allons créée une nouvelle scène a partir du niveau 2, pour cela nous allons faire clique
-droit dans notre niveau 2 puis faire dupliqué
+Dans un premier temps, nous allons créer une nouvelle scène à partir du niveau 2. Pour cela, faites un clic droit sur le niveau 2, puis choisissez `Dupliquer`.
 
 ![img.png](image_3/img.png)
 ![img_1.png](image_3/img_1.png)
 
-il devrais automatiquement s'appeler niveau 3, si ce n'es pas le cas, il suffie de le renommé telquel
+La nouvelle scène devrait automatiquement s'appeler `Niveau 3`. Si ce n'est pas le cas, il suffit de la renommer ainsi.
 
-puis on clique dessus afin d'affiché la scène dans l'éditeur
-le fait de dupliqué la scène permet de gardé tout les événement qu'on a créée sans a avoir besoin de les copier collé
+Cliquez ensuite dessus afin d'afficher la scène dans l'éditeur. Le fait de dupliquer la scène permet de garder tous les événements déjà créés, sans avoir besoin de les copier-coller.
 
-Avant de faire une manipulation, on vérifie qu'on est bien sur la scène niveau 3
+Avant de faire une manipulation, vérifiez que vous êtes bien sur la scène `Niveau 3`.
 
 ![img_2.png](image_3/img_2.png)
 
-On vas caché le calque "HUD"
+Nous allons cacher le calque `HUD`.
 
 ![img_3.png](image_3/img_3.png)
 
-puis on vas cliqué au centre de l'écran puis selectionné tout les éléments présent dans le monde
+Puis cliquez au centre de l'écran et sélectionnez tous les éléments présents dans le monde.
+
 ![img_4.png](image_3/img_4.png)
 
-puis appuillez sur la touche "suppr" du clavier pour tout supprimé
+Appuyez ensuite sur la touche `Suppr` du clavier pour tout supprimer.
 
-une fois cela fait, nous pouvons réafiché le calque "hud" et commencé a créée un nouveau monde
+Une fois cela fait, nous pouvons réafficher le calque `HUD` et commencer à créer un nouveau monde.
 
 ![img_5.png](image_3/img_5.png)
 
-une fois que nous avons un monde qui nous plais, nous allons relier les différente scene entre elle
+Quand le monde nous plaît, nous allons relier les différentes scènes entre elles.
 
-dans le niveau 2, nous allons mettre que quand on touche le diamand, on par dans le niveau 3
+Dans le niveau 2, nous allons modifier l'événement du diamant pour que le joueur parte vers le niveau 3 lorsqu'il le touche.
 
 ![img_6.png](image_3/img_6.png)
 
-et dans le niveau 3, nous allons mettre que quand on touche le diamant, qu'on vas a la scène de victoire
+Dans le niveau 3, nous allons mettre en place l'événement suivant : quand le joueur touche le diamant, il va vers la scène de victoire.
 
 ![img_7.png](image_3/img_7.png)
 
-Nous allons ensuite créée la zone pour le boss, il faut une zone plate, afin que le boss puisse marché dessus
+Nous allons ensuite créer la zone du boss. Il faut prévoir une zone plate afin que le boss puisse marcher dessus correctement.
 
 ![img_9.png](image_3/img_9.png)
 
-et nous allons créée un objet "boss_detection" qui sera un collider et qui permettra de detecté quand on rentre dans la
-zone du boss
+Nous allons aussi créer un objet `boss_detection`. Ce sera un collider qui permettra de détecter l'entrée du joueur dans la zone du boss.
 
 ![img_10.png](image_3/img_10.png)
-et on la met a l'entré du boss
+
+On le place ensuite à l'entrée de la zone du boss.
 
 ![img_11.png](image_3/img_11.png)
