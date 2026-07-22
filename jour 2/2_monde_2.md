@@ -169,3 +169,12 @@ Il ne faut pas oublier ensuite de mettre la valeur Z du joueur au-dessus de la p
 
 ![img_39.png](image_2/img_39.png)
 ![img_40.png](image_2/img_40.png)
+
+
+## HUD
+
+afin de pouvoir voir a nouveau la vie ainsi que le score du joueur, nous allons recréée un calque "hud" dans lequel nous allons remettre la barre de vie ainsi que le texte
+
+![img.png](image_2/img_41.png)
+
+![img_1.png](image_2/img_42.png)

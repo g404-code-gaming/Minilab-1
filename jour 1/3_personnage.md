@@ -109,7 +109,7 @@ nous appliquons au joueur l'animation idle.
 
 ![img_29.png](image_3/img_29.png)
 
-Pour l'action, cliquez sur "utiliser une expression".
+Pour l'action, vous pouvez choisir l'animation adéquate
 
 ![img_30.png](image_3/img_30.png)
 

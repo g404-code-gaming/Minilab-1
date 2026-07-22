@@ -20,3 +20,8 @@ Pour les piques, voici le code à ajouter.
 ![img_1.png](image_6/img_1.png)
 
 N'oubliez pas qu'il faut que les arbres aient un Z index négatif, afin qu'ils soient en arrière-plan et que le joueur soit toujours avec le Z index le plus élevé.
+
+nous allons également les mettre en objet globale dans un sous dossier de "décoration"
+
+![img.png](image_6/img_2.png)
+
